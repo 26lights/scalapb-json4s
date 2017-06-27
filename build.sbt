@@ -31,8 +31,7 @@ releaseProcess := Seq[ReleaseStep](
   ReleaseStep(action = Command.process("publishSigned", _), enableCrossBuild = true),
   setNextVersion,
   commitNextVersion,
-  pushChanges,
-  ReleaseStep(action = Command.process("sonatypeReleaseAll", _), enableCrossBuild = true)
+  pushChanges
 )
 
 libraryDependencies ++= Seq(
